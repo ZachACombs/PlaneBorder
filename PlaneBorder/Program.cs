@@ -19,8 +19,7 @@ namespace PlaneBorder
                     "by Zach Combs\n" +
                     "\n" +
                     "<source OBJ> <dest OBJ> <grid x> <gird y>\n" +
-                    "     Maps textures for a VVVVVV style track.\n" +
-                    "     See {0} for more details.\n" +
+                    "     Maps textures for a VVVVVV Circuit style track.\n" +
                     "     source OBJ      The source OBJ file\n" +
                     "     dest OBj        The destination OBJ file\n" +
                     "     corner width    The width of a corner\n" +
