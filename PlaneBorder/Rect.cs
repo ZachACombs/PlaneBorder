@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OBJMedium;
 
-namespace VVVVVVTexture
+namespace PlaneBorder
 {
     class Rect2d
     {

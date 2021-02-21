@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F77949F6-E14D-4635-B475-BD7F45FF6569}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>VVVVVVTexture</RootNamespace>
-    <AssemblyName>VVVVVVTexture</AssemblyName>
+    <RootNamespace>PlaneBorder</RootNamespace>
+    <AssemblyName>PlaneBorder</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
