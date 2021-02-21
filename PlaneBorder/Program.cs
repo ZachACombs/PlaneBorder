@@ -18,12 +18,12 @@ namespace PlaneBorder
                     "PlaneBorder\n" +
                     "by Zach Combs\n" +
                     "\n" +
-                    "<source OBJ> <dest OBJ> <grid x> <gird y>\n" +
+                    "<sourceOBJ> <destOBJ> <cornerWidth> <cornerHeight>\n" +
                     "     Maps textures for a VVVVVV Circuit style track.\n" +
-                    "     source OBJ      The source OBJ file\n" +
-                    "     dest OBj        The destination OBJ file\n" +
-                    "     corner width    The width of a corner\n" +
-                    "     corner height   The height of a corner");
+                    "     sourceOBJ      The source OBJ file\n" +
+                    "     destOBj        The destination OBJ file\n" +
+                    "     cornerWidth    The width of a corner\n" +
+                    "     cornerHeight   The height of a corner");
             }
             void WriteError(string s)
             {
