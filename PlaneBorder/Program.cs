@@ -154,39 +154,31 @@ namespace PlaneBorder
                     new ObjVector2(0.25F, 0.5F),
                     new ObjVector2(0.375F, 1F));
 
-                float in_width;
-                float in_height;
-                if (width < (cornerwidth * 2))
-                {
-                    in_width = 0;
-                }
-                else
-                {
-                    in_width = width - (cornerwidth * 2);
-                }
-                if (height < (cornerheight * 2))
-                {
-                    in_height = 0;
-                }
-                else
-                {
-                    in_height = height - (cornerheight * 2);
-                }
+                float in_width = ((width < (cornerwidth * 2)) ? 0f : (width - (cornerwidth * 2)));
+                float in_height = ((height < (cornerheight * 2)) ? 0f : (height - (cornerheight * 2)));
+                float uv_in_width = ((in_width == 0) ? 0f : (
+                    ((in_width / (cornerwidth * 2)) < 0.5f) ? 0.5f :
+                    ((float)Math2.Round(in_width / (cornerwidth * 2), 0.5, Math2.RoundTechnique.ToNearest))
+                    ));
+                float uv_in_height = ((in_height == 0) ? 0f : (
+                    ((in_height / (cornerheight * 2)) < 0.5f) ? 0.5f :
+                    ((float)Math2.Round(in_height / (cornerheight * 2), 0.5, Math2.RoundTechnique.ToNearest))
+                    ));
                 Rect2d side_left = new Rect2d(
                     new ObjVector2(0.375F, 0F),
-                    new ObjVector2(0.5F, in_height / (cornerheight * 2)));
+                    new ObjVector2(0.5F, uv_in_height));
                 Rect2d side_right = new Rect2d(
                     new ObjVector2(0.5F, 0F),
-                    new ObjVector2(0.625F, in_height / (cornerheight * 2)));
+                    new ObjVector2(0.625F, uv_in_height));
                 Rect2d side_bottom = new Rect2d(
                     new ObjVector2(0.625F, 0F),
-                    new ObjVector2(0.75F, in_width / (cornerwidth * 2)));//This will be rotated counter-clockwise
+                    new ObjVector2(0.75F, uv_in_width));//This will be rotated counter-clockwise
                 Rect2d side_top = new Rect2d(
                     new ObjVector2(0.75F, 0F),
-                    new ObjVector2(0.875F, in_width / (cornerwidth * 2)));//This will be rotated counter-clockwise
+                    new ObjVector2(0.875F, uv_in_width));//This will be rotated counter-clockwise
                 Rect2d center = new Rect2d(
                     new ObjVector2(0F, 0F),
-                    new ObjVector2(in_width / (cornerwidth * 2), in_height / (cornerheight * 2)));
+                    new ObjVector2(uv_in_width, uv_in_height));
 
 
 
