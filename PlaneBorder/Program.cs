@@ -18,12 +18,12 @@ namespace PlaneBorder
                     "PlaneBorder\n" +
                     "by Zach Combs\n" +
                     "\n" +
-                    "<sourceOBJ> <destOBJ> <cornerWidth> <cornerHeight>\n" +
+                    "<sourceOBJ> <destOBJ> <borderWidth> <borderHeight>\n" +
                     "     Maps textures for a VVVVVV Circuit style track.\n" +
                     "     sourceOBJ      The source OBJ file\n" +
                     "     destOBj        The destination OBJ file\n" +
-                    "     cornerWidth    The width of a corner\n" +
-                    "     cornerHeight   The height of a corner");
+                    "     borderWidth    The width of borders\n" +
+                    "     borderHeight   The height of borders");
             }
             void WriteError(string s)
             {
@@ -337,8 +337,8 @@ namespace PlaneBorder
 
             string file_source = args[0];
             string file_dest = args[1];
-            float corner_width = 0f;
-            float corner_height = 0f;
+            float corner_width = 0f; //borderWidth
+            float corner_height = 0f; //borderHeight
             if (!File.Exists(file_source))
             {
                 WriteError(String.Format(
